@@ -1,0 +1,7 @@
+aiogram
+fastapi
+uvicorn
+requests
+pillow
+qrcode
+python

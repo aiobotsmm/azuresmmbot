@@ -62,8 +62,8 @@ async def handle_webhook(request: Request):
     return {"ok": True}
 
 # --- Cancel Command (Global) ---
+router = Router()
 from keyboards import main_menu  # Make sure this is available
-
 @router.message(Command("cancel"))
 async def cancel_any(message: Message, state: FSMContext):
     current_state = await state.get_state()
@@ -113,7 +113,6 @@ from states import AddBalance
 from keyboards import upi_keyboard, main_menu
 from config import ADMIN_ID, UPI_ID  # ✅ pull sensitive constants from .env or config.py
 
-router = Router()
 
 # --- Step 1: User taps Add Balance ---
 @router.message(F.text == "💰 Add Balance")

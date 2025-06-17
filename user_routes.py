@@ -7,7 +7,7 @@ from keyboards import main_menu
 import logging
 
 # Use global DB cursor/connection
-from main import cur, conn
+from db import cur, conn
 
 router = Router()
 

@@ -111,7 +111,7 @@ from aiogram.fsm.context import FSMContext
 import io, qrcode, sqlite3, os
 from states import AddBalance
 from keyboards import upi_keyboard, main_menu
-from config import ADMIN_ID, UPI_ID  # ✅ pull sensitive constants from .env or config.py
+#from config import ADMIN_ID, UPI_ID  # ✅ pull sensitive constants from .env or config.py
 
 
 # --- Step 1: User taps Add Balance ---

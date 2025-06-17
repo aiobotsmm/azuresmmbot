@@ -14,6 +14,8 @@ router = Router()
 @router.message(Command("start"))
 async def cmd_start(m: Message, state: FSMContext):
     try:
+        print(f"[START] /start called by {m.from_user.id}")
+
         row = cur.execute("SELECT balance FROM users WHERE user_id=?", (m.from_user.id,)).fetchone()
 
         if row:

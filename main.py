@@ -22,7 +22,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from admin import admin_router
+from admin_routes import admin_router
+
 from router import router
 
 from fastapi import FastAPI, Request
@@ -65,6 +66,8 @@ async def handle_webhook(request: Request):
 
 # --- Cancel Command (Global) ---
 router = Router()
+admin_router = Router()
+
 from keyboards import main_menu  # Make sure this is available
 @router.message(Command("cancel"))
 async def cancel_any(message: Message, state: FSMContext):

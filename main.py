@@ -704,7 +704,7 @@ async def update_pending_orders():
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher
-from your_module import bot, dp, router, admin_router, initialize_database  # 👈 Replace with actual imports
+#from your_module import bot, dp, router, admin_router, initialize_database  # 👈 Replace with actual imports
 
 async def main():
     logging.basicConfig(level=logging.INFO)

@@ -8,7 +8,13 @@ from aiogram.fsm.storage.memory import MemoryStorage
 API_TOKEN = "7960194771:AAFJAndZCpDUEbwisV3ruW8GLVt6xU1eTp8"  # Replace this with your real token
 
 # Create bot and dispatcher
-bot = Bot(token=API_TOKEN, parse_mode=ParseMode.MARKDOWN)
+from aiogram.client.default import DefaultBotProperties
+
+bot = Bot(
+    token=API_TOKEN,
+    default=DefaultBotProperties(parse_mode=ParseMode.MARKDOWN)
+)
+
 dp = Dispatcher(storage=MemoryStorage())
 router = Router()
 dp.include_router(router)

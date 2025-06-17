@@ -3,5 +3,5 @@ fastapi
 uvicorn
 requests
 pillow
-qrcode
+qrcode==7.4.2
 python

@@ -22,6 +22,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+from admin import admin_router
+from router import router
 
 from fastapi import FastAPI, Request
 from aiogram.types import Update

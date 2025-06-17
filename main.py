@@ -26,6 +26,8 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from fastapi import FastAPI, Request
 from aiogram.types import Update
 from aiogram.client.default import DefaultBotProperties
+from db import initialize_database, conn, cur #db.py
+from states import Register, AddBalance, PlaceOrder #states.py
 
 # --- CONFIG from .env ---
 BOT_TOKEN = os.getenv("BOT_TOKEN")

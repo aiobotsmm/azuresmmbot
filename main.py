@@ -22,7 +22,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from admin_routes import admin_router
+#from admin_routes import admin_router
 
 from user_handlers import router # ✅ use your new filename
 from aiogram import Router
@@ -715,7 +715,6 @@ from aiogram import Bot, Dispatcher
 async def main():
     logging.basicConfig(level=logging.INFO)
     initialize_database()
-    
     dp.include_router(router)
     dp.include_router(admin_router)
     dp.services_cache = []

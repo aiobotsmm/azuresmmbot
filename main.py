@@ -24,7 +24,7 @@ from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 #from admin_routes import admin_router
 
-from user_routes import router  # ✅ use your new filename
+from user_handlers import router # ✅ use your new filename
 from aiogram import Router
 from fastapi import FastAPI, Request
 from aiogram.types import Update

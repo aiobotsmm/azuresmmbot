@@ -23,6 +23,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 #from admin_routes import admin_router
+from states import Register
 
 from user_handlers import router # ✅ use your new filename
 from aiogram import Router

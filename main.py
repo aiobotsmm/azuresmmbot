@@ -22,13 +22,14 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-#from admin_routes import admin_router
+from admin_routes import admin_router
 
 from user_handlers import router # ✅ use your new filename
 from aiogram import Router
 from fastapi import FastAPI, Request
 from aiogram.types import Update
 from aiogram.client.default import DefaultBotProperties
+from db import initialize_database
 from db import initialize_database, conn, cur #db.py
 from states import Register, AddBalance, PlaceOrder #states.py
 from keyboards import main_menu, upi_keyboard #keyboards.py
